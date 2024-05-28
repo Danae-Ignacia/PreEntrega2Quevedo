@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logoCartoonCraze.png";
+import logo from "../../assets/logo-cartoon-craze-red.png";
 import "../navigation/NavBar.css"
 
 export default function NavBar(){
     return(
         <nav className="navbar navbar-expand-lg navbar-light">
-             <div className="container-fluid">
+             <div className="container">
              <Link to="/">
              <img className="navbar-brand w-25" src={logo} alt="Logo" />
              </Link>
@@ -15,22 +15,23 @@ export default function NavBar(){
     
     <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav">
-        <li>
-            <button>
-                <Link to={'/'}>Inicio</Link>
-            </button>
+      <li className="nav-item">
+      <a className="nav-link">
+                <Link className="nav-a" to={'/'}>Inicio</Link>
+            </a>
             </li>
-            <li>
-            <button>
-                <Link to={'/categoryContainer'}>Todos los Productos</Link>
-            </button>
+          <li className="nav-item">
+          <a className="nav-link">
+          <Link className="nav-a" to={'/categoryContainer'}>Todos los Productos</Link>
+            </a>
             </li>
-            <li>
-            <button>
-            <Link to={'/categoryContainer'}>Nuevo</Link>
-            </button>
+          <li className="nav-item">
+            <a className="nav-link">
+            <Link className="nav-a" to={'/categoryContainer'}>Nuevo</Link>
+            </a>
             </li>
             </ul>
+            <span>🔍</span>
             </div>
 
 
