@@ -1,16 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+export default function ItemCardProduct({ image, title, price, idProd }) {
+  return (
+    <>
+      <div className="card">
+        <img className='w-auto card-img-top' src={image} alt={title} />
 
-export default function ItemCardProduct({title, price, image, idProd}){
-    return (
-        <>
-        <div>
-            <h4>{title}</h4>
-            <img src="{image}" alt="{title}" />
-            <p>Precio: ${price}</p>
-            <button>
-               <link to={`/product/${idProd}`}>Ver Producto</link>
-            </button>
+        <div className="card-body">
+        <h4>{title}</h4>
+        <p>Precio $ {price}</p>
+        <button>
+        <Link to={`/product/${idProd}`}>Ver detalles</Link>
+        </button>
         </div>
-        </>
-    )
+
+      </div>
+    </>
+  );
 }

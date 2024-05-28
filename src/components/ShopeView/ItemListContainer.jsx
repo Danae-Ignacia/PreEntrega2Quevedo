@@ -1,7 +1,7 @@
-import "./ItemListContainer.css"
+import "./ItemListContainer.css";
+import { getProducts} from "../../asyncMock";
 import { useEffect, useState } from "react";
-import { getProduct} from "../../asyncMock";
-import ItemCardProduct from "../ProductsView/ItemCardProduct";
+import ItemCardProduct from "./ItemCardProduct";
 
 
 
@@ -14,7 +14,12 @@ useEffect(() => {
 
   return (
     <>
-      <h1>Productos Destacados</h1>
+
+    <section className="d-flex">
+        <div className="container">
+      <h1 className="mt-3 mb-5">Productos Destacados</h1>
+      <div className="row justify-content-center">
+      <div className="col-6 col-md-4">
       <article>
         {products.map((product) => (
           <ItemCardProduct
@@ -27,6 +32,10 @@ useEffect(() => {
           />
         ))}
       </article>
+      </div>
+      </div>
+      </div>
+      </section>
     </>
   );
 }
