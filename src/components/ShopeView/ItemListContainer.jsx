@@ -19,9 +19,9 @@ useEffect(() => {
         <div className="container">
       <h1 className="mt-3 mb-5">Productos Destacados</h1>
       <div className="row justify-content-center">
-      <div className="col-6 col-md-4">
-      <article>
+    
         {products.map((product) => (
+              <div className="col-3 col-md-3">
           <ItemCardProduct
             key={product.id}
             idProd={product.id}
@@ -30,9 +30,9 @@ useEffect(() => {
             image={product.image}
             description={product.description}
           />
+              </div>
         ))}
-      </article>
-      </div>
+  
       </div>
       </div>
       </section>
