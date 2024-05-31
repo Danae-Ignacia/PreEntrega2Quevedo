@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo-cartoon-craze-red.png";
 import "../navigation/NavBar.css"
+import CartWidget from "./CartWidget";
 
 export default function NavBar(){
     return(
@@ -31,7 +32,7 @@ export default function NavBar(){
             </a>
             </li>
             </ul>
-            <span>🔍</span>
+          <CartWidget/>
             </div>
 
 

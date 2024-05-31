@@ -14,7 +14,7 @@ export default function SingleProduct() {
   
     return (
       <>
-        <h1>Single Prod</h1>
+        <h1>Producto</h1>
         <p>ID: {prodId}</p>
         <h3>Nombre: {product.title}</h3>
         <img src={product.image} alt={product.title} />
