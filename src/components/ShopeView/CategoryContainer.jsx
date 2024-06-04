@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../../asyncMock";
+import { getCategory } from "../../asyncMock";
 import ItemCardProduct from "./ItemCardProduct";
 
 export default function CategoryContainer() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getProducts.then((data) => setProducts(data));
-  }, []);
+    getCategory(category).then((data) => {
+      setProducts(data);
+    });
+  }, [category]);
 
   return (
     <>
       <h3>Nuestros Productos</h3>
-      <article>
+      <section>
         {products.map((product) => (
           <ItemCardProduct
             title={product.title}
@@ -21,7 +23,7 @@ export default function CategoryContainer() {
             idProd={product.idProd}
           />
         ))}
-      </article>
+      </section>
     </>
   );
 }

@@ -18,17 +18,17 @@ export default function NavBar(){
     <ul className="navbar-nav">
       <li className="nav-item">
       <a className="nav-link">
-                <Link className="nav-a" to={'/'}>Inicio</Link>
+                <Link className="nav-a" to={"/"}>Inicio</Link>
             </a>
             </li>
           <li className="nav-item">
           <a className="nav-link">
-          <Link className="nav-a" to={'/categoryContainer'}>Todos los Productos</Link>
+          <Link className="nav-a" to={"/simpson"}>Simpson</Link>
             </a>
             </li>
           <li className="nav-item">
             <a className="nav-link">
-            <Link className="nav-a" to={'/categoryContainer'}>Nuevo</Link>
+            <Link className="nav-a" to={'/futurama'}>Futurama</Link>
             </a>
             </li>
             </ul>

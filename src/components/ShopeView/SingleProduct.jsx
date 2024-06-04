@@ -14,22 +14,29 @@ export default function SingleProduct() {
   
     return (
       <>
-        <h1>Producto</h1>
+      <div className="container">
+        <div className="row align-items-center justify-content-center">
+        <div className="col-6">
+        <h1 className="mt-3">{product.title}</h1>
+        <img src={product.image} className="img-fluid w-auto" alt={product.title} />
+        </div>
+        <div className="col-6">
         <p>ID: {prodId}</p>
-        <h3>Nombre: {product.title}</h3>
-        <img src={product.image} alt={product.title} />
         <p>Descripcion: {product.description}</p>
         <p>Categoria: {product.category}</p>
         <p>Precio:{product.price}</p>
-
-        <div className=" flex justify-center gap-4 p-4 pt-0">
+        <div className="d-flex justify-center gap-4 p-4 pt-0">
             <div className="flex gap-4">
-              <button onClick={() => {count > 0 && setcount(count -1);}} className="btn btn-outline btn-sm">-</button>
+              <button onClick={() => {count > 0 && setCount(count -1);}} className="btn btn-outline btn-sm">-</button>
               <p>{count}</p>
-              <button onClick={() => {count < products.stock && setcount(count +1)}} className="btn btn-outline btn-sm">+</button>
+              <button onClick={() => {count < product.stock && setCount(count +1)}} className="btn btn-outline btn-sm">+</button>
             </div>
-            <ButtonComponent title={"Comprar"} />
           </div>
+        </div>
+        </div>
+
+</div>
+
       </>
     );
   }
