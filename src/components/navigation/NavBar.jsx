@@ -23,12 +23,12 @@ export default function NavBar(){
             </li>
           <li className="nav-item">
           <a className="nav-link">
-          <Link className="nav-a" to={"/simpson"}>Simpson</Link>
+          <Link className="nav-a" to={"/itemListContainer/simpson"}>Simpson</Link>
             </a>
             </li>
           <li className="nav-item">
             <a className="nav-link">
-            <Link className="nav-a" to={'/futurama'}>Futurama</Link>
+            <Link className="nav-a" to={"/itemListContainer/futurama"}>Futurama</Link>
             </a>
             </li>
             </ul>

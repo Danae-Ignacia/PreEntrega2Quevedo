@@ -3,8 +3,7 @@ export default function ItemCardProduct({ image, title, price, idProd }) {
   return (
     <>
       <div className="card">
-        <img className='w-auto card-img-top' src={image} alt={title} />
-
+        <img className='w-auto img-fluid card-img-top' src={image} alt={title} />
         <div className="card-body">
         <h4>{title}</h4>
         <p>Precio $ {price}</p>
